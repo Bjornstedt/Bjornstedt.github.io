@@ -3,14 +3,103 @@
 
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="order.css">
     <title> Uppgift HTML </title>
 
 </head>
 
 <body>
-  
-  <p> Hejhej </p>
-  
-  </body>
-  
+<div class="alltinnehall">
+
+    <div class="header">
+        <div class="bild"><img src="placeholderhtml.jpg" alt="placeholder" width="100%"> </div>
+
+    </div>
+
+    <div class="standardtext"> 
+        <h1> Lorem ipsum dolor sit amet.</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas mollis tellus non nisi lobortis, 
+			id hendrerit justo convallis. Nullam egestas facilisis velit nec cursus. Etiam accumsan in nunc in
+			convallis. Proin placerat, urna vel placerat porta, nisi enim laoreet tortor, eget pretium dolor 
+			odio a purus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque cursus tortor et 
+			est sollicitudin venenatis.</p> 
+        
+        <h2> Lorem ipsum dolor sit amet.</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas mollis tellus non nisi lobortis, 
+            id hendrerit justo convallis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque cursus tortor et 
+            est sollicitudin venenatis.</p>  
+    
+    </div>
+
+    <div id="content" class="box">
+
+        <div class="rightcolumn">
+            <div class="links">
+            <p> <a href="#"> Home </a> </p>
+            <p> <a href="#"> Start </a> </p>
+            <p> <a href="#"> Catalog </a> </p>
+            </div>
+
+            <div class="valdaskivor">
+            <p> Du har valt följande skivor: </p>
+            </div>
+            <div class="sum">
+            <p> Pris: 0 SEK </p>
+            </div>
+        </div>
+            <div class="leftcolumn">
+                <form id="formularet">
+        
+                <table class="table" id="maintable" border="0px" width="100%">
+
+                    <tr><td colspan="2"> *Namn: </td><td> <input type="text"></input>
+                    <tr><td colspan="2"> *Efternamn: </td><td><input type="text"></input></td>
+                    <tr><td colspan="2"> *Adress: </td><td> <input type="text"></input> </td>
+                    <tr><td colspan="2"> *E-post: </td><td> <input type="text"></input> </td></tr>
+                    <tr><td colspan="2"> *Ålder: </td><td> <select name="age" id="age">
+                    <option value="0">Tillräckligt ung</option>
+                    <option value="1">Tillräckligt gammal</option>
+                    </select></td></tr>
+                    <tr><td colspan="2"> Övrigt: </td><td><textarea></textarea></td></tr>
+                    <tr><td colspan="3"></td></tr>
+                    <tr><td colspan="3"> Välj Album: </td></tr>
+                    <tr><td colspan="3"></td></tr>
+                    <tr><td rowspan="3" class="artist"> King Gizzard And The Lizard Wizard</td></div>
+                    <td><input type="checkbox"></input> Infest The Rats Nest</td> <td class="prices"> 149kr </td></tr> 
+                    <tr><td><input type="checkbox"></input> Nonagon Infinity</td><td class="prices"> 199kr </td></tr>
+                    <tr><td><input type="checkbox"></input> Eyes Like The Sky </td> <td class="prices"> 209kr </td></tr>
+                    <tr><td colspan="3"></td></tr>
+                    <tr><td rowspan="3" class="artist"> The Smiths </td></div>
+                    <td><input type="checkbox"></input> The Smiths </td> <td class="prices"> 149kr </td></tr> 
+                    <tr><td><input type="checkbox"></input> Meat is Murder </td><td class="prices"> 199kr </td></tr>
+                    <tr><td><input type="checkbox"></input> The Queen is Dead </td> <td class="prices"> 209kr </td></tr>
+                    <tr><td colspan="3"></td></tr>
+                    <tr><td rowspan="3" class="artist"> Deftones </td></div>
+                    <td><input type="checkbox"></input> Around the Fur </td> <td class="prices"> 149kr </td></tr> 
+                    <tr><td><input type="checkbox"></input> White Pony </td><td class="prices"> 199kr </td></tr>
+                    <tr><td><input type="checkbox"></input> Ohms </td> <td class="prices"> 209kr </td></tr>
+                    <tr><td colspan="3"></td></tr>
+                    <tr><td colspan="2">Välj Mediatyp:</td>
+                    <td style="text-align: right;">
+                        <input type="radio" name="knapp"> Vinyl </input>
+                        <input type="radio" name="knapp"> CD </input> 
+                        <input type="radio" name="knapp"> Mp3</input></td></tr>
+                    <tr><td colspan="3"></td></tr>
+                    <tr><td colspan="3" style="text-align: right;"><input type="button" value="Skicka Beställning"></input></td></tr>
+                </table>
+        
+                </form>
+                <div id="disclaimer">
+                    <b>Disclaimer</b> <br>
+                    Quisque cursus tortor et 
+                            est sollicitudin venenatis.
+                    </div>
+            </div>
+
+            
+    </div>
+    
+    
+</div>
+</body>
 </html>
