@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="order.css">
+    <script src="Order.js"></script>
     <title> Uppgift HTML </title>
 
 </head>
@@ -43,7 +44,7 @@
             <div class="valdaskivor">
             <p> Du har valt följande skivor: </p>
             </div>
-            <div class="sum">
+            <div id="sum">
             <p> Pris: 0 SEK </p>
             </div>
         </div>
@@ -65,19 +66,19 @@
                     <tr><td colspan="3"> Välj Album: </td></tr>
                     <tr><td colspan="3"></td></tr>
                     <tr><td rowspan="3" class="artist"> King Gizzard And The Lizard Wizard</td></div>
-                    <td><input type="checkbox"></input> Infest The Rats Nest</td> <td class="prices"> 149kr </td></tr> 
-                    <tr><td><input type="checkbox"></input> Nonagon Infinity</td><td class="prices"> 199kr </td></tr>
-                    <tr><td><input type="checkbox"></input> Eyes Like The Sky </td> <td class="prices"> 209kr </td></tr>
+                    <td><input type="checkbox" value="149" onclick="albumPrices(this);"></input> Infest The Rats Nest</td> <td class="prices"> 149kr </td></tr> 
+                    <tr><td><input type="checkbox" value="199" onclick="albumPrices(this);"></input> Nonagon Infinity</td><td class="prices"> 199kr </td></tr>
+                    <tr><td><input type="checkbox" value="209" onclick="albumPrices(this);"></input> Eyes Like The Sky </td> <td class="prices"> 209kr </td></tr>
                     <tr><td colspan="3"></td></tr>
                     <tr><td rowspan="3" class="artist"> The Smiths </td></div>
-                    <td><input type="checkbox"></input> The Smiths </td> <td class="prices"> 149kr </td></tr> 
-                    <tr><td><input type="checkbox"></input> Meat is Murder </td><td class="prices"> 199kr </td></tr>
-                    <tr><td><input type="checkbox"></input> The Queen is Dead </td> <td class="prices"> 209kr </td></tr>
+                    <td><input type="checkbox" value="149" onclick="albumPrices(this);"></input> The Smiths </td> <td class="prices"> 149kr </td></tr> 
+                    <tr><td><input type="checkbox" value="199" onclick="albumPrices(this);"></input> Meat is Murder </td><td class="prices"> 199kr </td></tr>
+                    <tr><td><input type="checkbox" value="209" onclick="albumPrices(this);"></input> The Queen is Dead </td> <td class="prices"> 209kr </td></tr>
                     <tr><td colspan="3"></td></tr>
                     <tr><td rowspan="3" class="artist"> Deftones </td></div>
-                    <td><input type="checkbox"></input> Around the Fur </td> <td class="prices"> 149kr </td></tr> 
-                    <tr><td><input type="checkbox"></input> White Pony </td><td class="prices"> 199kr </td></tr>
-                    <tr><td><input type="checkbox"></input> Ohms </td> <td class="prices"> 209kr </td></tr>
+                    <td><input type="checkbox" value="149" onclick="albumPrices(this);"></input> Around the Fur </td> <td class="prices"> 149kr </td></tr> 
+                    <tr><td><input type="checkbox" value="199" onclick="albumPrices(this);"></input> White Pony </td><td class="prices"> 199kr </td></tr>
+                    <tr><td><input type="checkbox" value="209" onclick="albumPrices(this);"></input> Ohms </td> <td class="prices"> 209kr </td></tr>
                     <tr><td colspan="3"></td></tr>
                     <tr><td colspan="2">Välj Mediatyp:</td>
                     <td style="text-align: right;">
