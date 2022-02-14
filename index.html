@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- Skolarbete VT22 -->
 <html>
 
 <head>
@@ -41,22 +42,25 @@
             <p> <a href="#"> Catalog </a> </p>
             </div>
 
-            <div class="valdaskivor">
-            <p> Du har valt följande skivor: </p>
+            <div class="valdaskivor" name="valdaskivor" id="valdaskivor"> Valda Skivor:
+                <div class="innerDiv" name="innerDiv" id="innerDiv"> 
+                 </div>
+            
             </div>
-            <div id="sum">
-            <p> Pris: 0 SEK </p>
+            <div id="sum" name="sum">
+            Pris: 0 SEK 
             </div>
+            <div id="spellcheck"> </div>
         </div>
             <div class="leftcolumn">
-                <form id="formularet">
+                <form id="formularet" name="formularet">
         
                 <table class="table" id="maintable" border="0px" width="100%">
 
-                    <tr><td colspan="2"> *Namn: </td><td> <input type="text"></input>
-                    <tr><td colspan="2"> *Efternamn: </td><td><input type="text"></input></td>
-                    <tr><td colspan="2"> *Adress: </td><td> <input type="text"></input> </td>
-                    <tr><td colspan="2"> *E-post: </td><td> <input type="text"></input> </td></tr>
+                    <tr><td colspan="2"> *Namn: </td><td> <input type="text" name="firstName"></input>
+                    <tr><td colspan="2"> *Efternamn: </td><td><input type="text" name="lastName"></input></td>
+                    <tr><td colspan="2"> *Adress: </td><td> <input type="text" name="adress"></input> </td>
+                    <tr><td colspan="2"> *E-post: </td><td> <input type="text" name="mail"></input> </td></tr>
                     <tr><td colspan="2"> *Ålder: </td><td> <select name="age" id="age">
                     <option value="0">Tillräckligt ung</option>
                     <option value="1">Tillräckligt gammal</option>
@@ -66,27 +70,27 @@
                     <tr><td colspan="3"> Välj Album: </td></tr>
                     <tr><td colspan="3"></td></tr>
                     <tr><td rowspan="3" class="artist"> King Gizzard And The Lizard Wizard</td></div>
-                    <td><input type="checkbox" value="149" onclick="albumPrices(this);"></input> Infest The Rats Nest</td> <td class="prices"> 149kr </td></tr> 
-                    <tr><td><input type="checkbox" value="199" onclick="albumPrices(this);"></input> Nonagon Infinity</td><td class="prices"> 199kr </td></tr>
-                    <tr><td><input type="checkbox" value="209" onclick="albumPrices(this);"></input> Eyes Like The Sky </td> <td class="prices"> 209kr </td></tr>
+                    <td><input type="checkbox" value="Infest The Rats Nest |149" onclick="changeContent(this, 'valdaskivor', 'innerDiv');"></input> Infest The Rats Nest</td> <td class="prices"> 149kr </td></tr> 
+                    <tr><td><input type="checkbox" value="Nonagon Infinity |199" onclick="changeContent(this, 'valdaskivor', 'innerDiv');"></input> Nonagon Infinity</td><td class="prices"> 199kr </td></tr>
+                    <tr><td><input type="checkbox" value="Eyes Like The Sky |209" onclick="changeContent(this, 'valdaskivor', 'innerDiv');"></input> Eyes Like The Sky </td> <td class="prices"> 209kr </td></tr>
                     <tr><td colspan="3"></td></tr>
                     <tr><td rowspan="3" class="artist"> The Smiths </td></div>
-                    <td><input type="checkbox" value="149" onclick="albumPrices(this);"></input> The Smiths </td> <td class="prices"> 149kr </td></tr> 
-                    <tr><td><input type="checkbox" value="199" onclick="albumPrices(this);"></input> Meat is Murder </td><td class="prices"> 199kr </td></tr>
-                    <tr><td><input type="checkbox" value="209" onclick="albumPrices(this);"></input> The Queen is Dead </td> <td class="prices"> 209kr </td></tr>
+                    <td><input type="checkbox" value="The Smiths |149" onclick="changeContent(this, 'valdaskivor', 'innerDiv');"></input> The Smiths </td> <td class="prices"> 149kr </td></tr> 
+                    <tr><td><input type="checkbox" value="Meat is Murder |199" onclick="changeContent(this, 'valdaskivor', 'innerDiv');"></input> Meat is Murder </td><td class="prices"> 199kr </td></tr>
+                    <tr><td><input type="checkbox" value="The Queen is Dead |209" onclick="changeContent(this, 'valdaskivor', 'innerDiv');"></input> The Queen is Dead </td> <td class="prices"> 209kr </td></tr>
                     <tr><td colspan="3"></td></tr>
                     <tr><td rowspan="3" class="artist"> Deftones </td></div>
-                    <td><input type="checkbox" value="149" onclick="albumPrices(this);"></input> Around the Fur </td> <td class="prices"> 149kr </td></tr> 
-                    <tr><td><input type="checkbox" value="199" onclick="albumPrices(this);"></input> White Pony </td><td class="prices"> 199kr </td></tr>
-                    <tr><td><input type="checkbox" value="209" onclick="albumPrices(this);"></input> Ohms </td> <td class="prices"> 209kr </td></tr>
+                    <td><input type="checkbox" id="checkbox" value="Around the Fur |0" onclick="showAlert(this);"></input> Around the Fur </td> <td class="prices"> Ej i lager </td></tr> 
+                    <tr><td><input type="checkbox" value="White Pony |199" onclick="changeContent(this, 'valdaskivor', 'innerDiv');"></input> White Pony </td><td class="prices"> 199kr </td></tr>
+                    <tr><td><input type="checkbox" value="Ohms |209" onclick="changeContent(this, 'valdaskivor', 'innerDiv');"></input> Ohms </td> <td class="prices"> 209kr </td></tr>
                     <tr><td colspan="3"></td></tr>
                     <tr><td colspan="2">Välj Mediatyp:</td>
                     <td style="text-align: right;">
-                        <input type="radio" name="knapp"> Vinyl </input>
+                        <input type="radio" name="knapp" checked> Vinyl </input>
                         <input type="radio" name="knapp"> CD </input> 
                         <input type="radio" name="knapp"> Mp3</input></td></tr>
                     <tr><td colspan="3"></td></tr>
-                    <tr><td colspan="3" style="text-align: right;"><input type="button" value="Skicka Beställning"></input></td></tr>
+                    <tr><td colspan="3" style="text-align: right;"><input type="button" value="Skicka Beställning" id="submitForm" onclick="spellCheck(this, 'valdaskivor', 'sum');"></input></td></tr>
                 </table>
         
                 </form>
@@ -99,7 +103,6 @@
 
             
     </div>
-    
     
 </div>
 </body>
